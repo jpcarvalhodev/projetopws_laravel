@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use App\Http\Requests\StoreBookRequest;
 use App\Http\Requests\UpdateBookRequest;
-use App\Models\Book;
+use Illuminate\Http\Request;
 
 class BooksController extends Controller
 {
@@ -67,6 +68,20 @@ class BooksController extends Controller
         }
 
         return response()->json($unit,200);
+    }
+
+    public function getBooks(Request $request)
+    {
+        $books = Book::when($request->filled('title'), function ($query) use ($request){
+            return $query->where(
+            \DB::raw('LOWER(title)'),
+            'like',
+            '%' . strtolower($request->input('title')) . '%'
+            );
+        })
+        ->get();
+
+        return response()->json($books, 200);
     }
 
     /**

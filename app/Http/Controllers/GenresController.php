@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Genre;
 use App\Http\Requests\StoreGenreRequest;
 use App\Http\Requests\UpdateGenreRequest;
+use Illuminate\Http\Request;
 
 class GenresController extends Controller
 {
@@ -58,6 +59,20 @@ class GenresController extends Controller
         }
 
         return response()->json($genre,200);
+    }
+
+    public function getGenres(Request $request)
+    {
+        $genres = Genre::when($request->filled('name'), function ($query) use ($request){
+            return $query->where(
+            \DB::raw('LOWER(name)'),
+            'like',
+            '%' . strtolower($request->input('name')) . '%'
+            );
+        })
+        ->get();
+
+        return response()->json($genres, 200);
     }
 
     /**

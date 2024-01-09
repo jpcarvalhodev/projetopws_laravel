@@ -34,6 +34,7 @@ Route::post('/books', [BooksController::class, 'store']);
 Route::put('/books/update/{id}', [BooksController::class, 'update']);
 Route::delete('/books/delete/{id}', [BooksController::class, 'delete']);
 Route::get('/books/count', [BooksController::class, 'count']);
+Route::get('/books/getBooks', [BooksController::class, 'getBooks']);
 
 
 Route::get('/genres', [GenresController::class, 'index']);
@@ -41,6 +42,7 @@ Route::get('/genres/show/{id}', [GenresController::class, 'show']);
 Route::post('/genres', [GenresController::class, 'store']);
 Route::put('/genres/update/{id}', [GenresController::class, 'update']);
 Route::delete('/genres/delete/{id}', [GenresController::class, 'delete']);
+Route::get('/genres/getGenres', [GenresController::class, 'getGenres']);
 
 
 Route::get('/loans', [LoansController::class, 'index']);
@@ -57,3 +59,4 @@ Route::post('/students', [StudentsController::class, 'store']);
 Route::put('/students/update/{id}', [StudentsController::class, 'update']);
 Route::delete('/students/delete/{id}', [StudentsController::class, 'delete']);
 Route::get('/students/count', [StudentsController::class, 'count']);
+Route::get('/students/getStudents', [StudentsController::class, 'getStudents']);

@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Book;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;
@@ -16,9 +15,9 @@ class Genre extends Model
         'name'
     ];
 
-    public function book()
+    public function books()
     {
-        return $this->belongsTo(Book::class)->withTimestamps();
+        return $this->hasMany(Book::class)->withTimestamps();
     }
 
     public static function rules($id = null)

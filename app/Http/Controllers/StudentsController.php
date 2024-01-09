@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Student;
 use App\Http\Requests\StoreStudentRequest;
 use App\Http\Requests\UpdateStudentRequest;
+use Illuminate\Http\Request;
 
 class StudentsController extends Controller
 {
@@ -68,6 +69,20 @@ class StudentsController extends Controller
         $studentsCount = Student::count();
 
         return response()->json($studentsCount, 200);
+    }
+
+    public function getStudents(Request $request)
+    {
+        $students = Student::when($request->filled('name'), function ($query) use ($request){
+            return $query->where(
+            \DB::raw('LOWER(name)'),
+            'like',
+            '%' . strtolower($request->input('name')) . '%'
+            );
+        })
+        ->get();
+
+        return response()->json($students, 200);
     }
 
     /**

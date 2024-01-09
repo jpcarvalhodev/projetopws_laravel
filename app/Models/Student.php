@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Loan;
-use App\Models\Book;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;
@@ -20,14 +18,9 @@ class Student extends Model
         'nif'
     ];
 
-    public function loan()
+    public function loans()
     {
-        return $this->belongsToMany(Loan::class)->withTimestamps();
-    }
-
-    public function book()
-    {
-        return $this->hasMany(Book::class)->withTimestamps();
+        return $this->hasMany(Loan::class)->withTimestamps();
     }
 
     public static function rules($id = null)
