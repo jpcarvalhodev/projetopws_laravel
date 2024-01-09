@@ -22,7 +22,7 @@ class Book extends Model
 
     public function genre()
     {
-        return $this->hasMany(Genre::class)->withTimestamps();
+        return $this->hasOne(Genre::class)->withTimestamps();
     }
 
     public function loan()
@@ -32,7 +32,7 @@ class Book extends Model
 
     public function student()
     {
-        return $this->belongsTo(Student::class)->withTimestamps();
+        return $this->belongsToMany(Student::class)->withTimestamps();
     }
 
     public static function rules($id = null)

@@ -27,7 +27,7 @@ class Student extends Model
 
     public function book()
     {
-        return $this->hasOne(Book::class)->withTimestamps();
+        return $this->hasMany(Book::class)->withTimestamps();
     }
 
     public static function rules($id = null)
