@@ -1,20 +1,20 @@
-Library Management API in PHP/Laravel
+# Library Management API in PHP/Laravel
 
 This repository contains an API developed in PHP using the Laravel framework for library management. This API provides functionalities to manage books, genres, loans and students, allowing librarians and users to interact with the system efficiently and intuitively.
 
-Features
+## Features
 
 	•	CRUD operations for books
 	•	CRUD operations for genres
 	•	CRUD operations for loans
 	•	CRUD operations for students
 
-Prerequisites
+## Prerequisites
 
 	•	PHP >= 7.4
 	•	Composer
 
-Installation
+## Installation
 
 	1.	Clone this repository:
 
@@ -36,10 +36,10 @@ php artisan migrate
 
 php artisan serve
 
-Usage
+## Usage
 
 You can use any HTTP client to interact with the API.
 
-Contribution
+## Contribution
 
 Contributions are welcome! Feel free to open an issue!
