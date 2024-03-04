@@ -38,45 +38,11 @@ php artisan serve
 
 Usage
 
-You can use any HTTP client to interact with the API. Below are some examples of how to use the API:
-
-	•	Create a book:
-
-POST /api/books
-
-{
-    "title": "Book Title",
-    "author_id": 1,
-    "publisher_id": 1,
-    "category_id": 1,
-    "published_at": "2024-03-03"
-}
-
-	•	List all books:
-
-GET /api/books
-
-	•	Get a book by ID:
-
-GET /api/books/{id}
-
-	•	Update a book:
-
-PUT /api/books/{id}
-
-{
-    "title": "New Title"
-}
-
-	•	Delete a book:
-
-DELETE /api/books/{id}
-
-For more details on available endpoints, refer to the API documentation.
+You can use any HTTP client to interact with the API.
 
 Contribution
 
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+Contributions are welcome! Feel free to open an issue!
 
 License
 
