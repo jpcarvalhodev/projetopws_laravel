@@ -43,7 +43,3 @@ You can use any HTTP client to interact with the API.
 Contribution
 
 Contributions are welcome! Feel free to open an issue!
-
-License
-
-This project is licensed under the MIT License.
