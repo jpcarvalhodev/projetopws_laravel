@@ -4,15 +4,15 @@ This repository contains an API developed in PHP using the Laravel framework for
 
 ## Features
 
-	•	CRUD operations for books
-	•	CRUD operations for genres
-	•	CRUD operations for loans
-	•	CRUD operations for students
+•	CRUD operations for books
+•	CRUD operations for genres
+•	CRUD operations for loans
+•	CRUD operations for students
 
 ## Prerequisites
 
-	•	PHP >= 7.4
-	•	Composer
+•	PHP >= 7.4
+•	Composer
 
 ## Installation
 
