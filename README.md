@@ -16,31 +16,31 @@ This repository contains an API developed in PHP using the Laravel framework for
 
 ## Installation
 
-	1.	Clone this repository:
+1.	Clone this repository:
 
 ```
 git clone https://github.com/jpcarvalhodev/projetopws-laravel.git
 ```
 
-	2.	Install Composer dependencies:
+2.	Install Composer dependencies:
  
 ```
 composer install
 ```
 
-	3.	Copy the .env.example file to .env and configure the database:
+3.	Copy the .env.example file to .env and configure the database:
 
 ```
 cp .env.example .env
 ```
 
-	4.	Run the database migrations:
+4.	Run the database migrations:
 
 ```
 php artisan migrate
 ```
 
-	5.	Start the development server:
+5.	Start the development server:
 
 ```
 php artisan serve
