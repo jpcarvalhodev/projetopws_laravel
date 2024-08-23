@@ -23,7 +23,7 @@ This repository contains an API developed in PHP using the Laravel framework for
 1.	Clone this repository:
 
 ```
-git clone https://github.com/jpcarvalhodev/projetopws-laravel.git
+git clone https://github.com/jpcarvalhodev/projetopws_laravel.git
 ```
 
 2.	Install Composer dependencies:
